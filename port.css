@@ -1,0 +1,879 @@
+/*port.css*/
+
+:root {
+    --main-bg: #faf6f5;
+    --card-bg: #fff;
+    --border-radius: 24px;
+    --accent: #954894;
+    --font-main: 'Inter', Arial, sans-serif;
+    --shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--main-bg);
+    font-family: var(--font-main);
+    color: #232323;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 5vw 16px 5vw;
+    background: #f5efec;
+    border-bottom: 1px solid #f2e9e3;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #232323;
+    font-weight: 800;
+    transition: background 0.2s;
+}
+
+.nav-links a.active, .nav-links a:hover {
+    background: #ececec;
+}
+
+.contact {
+    font-size: 1rem;
+    color: #232323;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+/* Grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    padding: 48px 5vw;
+}
+
+/* General card style */
+.card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    min-height: 180px;
+    min-width: 0;
+    overflow: hidden;
+}
+
+/* Profile image card */
+.photo-card {
+    grid-column: span 2;
+    padding: 0;
+    position: relative;
+    min-height: 180px;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Flex container for side-by-side layout */
+.photo-flex {
+    display: flex;
+    align-items: center;  /* Centers content vertically */
+    width: 100%;
+}
+
+.img-container {
+    margin: 8px 24px 8px 8px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.13);
+    flex-shrink: 0;
+    position: relative;
+    background: #fff; /* base background */
+}
+
+
+
+.intro-text {
+    margin-top: 0;        /* Remove top offset */
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-family: 'Merriweather', serif;
+    color: #333;
+    max-width: 550px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+}
+
+
+
+.journey-svg {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    min-width: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Toggle switch card */
+.toggle {
+    align-items: center;
+    justify-content: center;
+}
+
+.switch {
+    width: 50px;
+    height: 24px;
+    background: #f5f5f5;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.switch:before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    background: #232323;
+    border-radius: 50%;
+    transition: left 0.2s;
+}
+
+/* LinkedIn card */
+.linkedin {
+    background: #7e96c7;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.linkedin a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2.7rem;
+    letter-spacing: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Phone/card with mockup */
+.phone {
+    background: linear-gradient(120deg, #a6e3d5 60%, #f8dcc7 100%);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 260px;
+}
+
+.phone img {
+    width: 80%;
+    border-radius: 16px;
+    box-shadow: 0 3px 16px rgba(0,0,0,0.07);
+    display: block;
+    margin: 0 auto;
+    transform: rotate(13deg);
+}
+
+.blank-card {
+    grid-column: span 1;
+    background: #ececec;
+    min-height: 140px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;      /* vertical centering */
+    justify-content: center;  /* horizontal centering */
+    padding: 18px 20px;
+}
+
+.costco-logo {
+    display: block;
+    max-width: 320px;
+    width: 320px;
+    height: auto;
+    border-radius: 15px;
+    margin: 0;
+}
+
+.row-divider {
+    position: relative; /* Add this! */
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    height: 36px;
+    gap: 0;
+}
+
+  
+.pdf-popup img {
+    width: 100%;
+    height: 93%;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+.popup-label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #81077e;
+    margin-top: 4px;
+    text-align: center;
+    word-break: break-all;
+}
+  
+  .summary-bubble:hover .pdf-popup,
+  .summary-bubble:focus-within .pdf-popup {
+    display: block;
+  }
+  
+.divider-line {
+    flex: 1;
+    height: 4px;
+    background: #b878d8;
+    margin-left: -2px;  /* overlaps the bubble's border for a seamless join */
+    border-radius: 2px;
+    opacity: 1;
+}
+
+/* The line between bubbles */
+.divider-line.between {
+    width: 200px;         /* <--- SET YOUR GAP HERE (try 12-24px for close) */
+    height: 4px;
+    background: #b878d8;
+    margin: 0 -6px;      /* <--- Increase negative for tighter join */
+    border-radius: 2px;
+    flex: none;          /* <-- THIS IS THE MAGIC! */
+}
+
+
+
+.card.empty {
+    background: transparent !important;
+    box-shadow: none !important;
+    pointer-events: none !important;
+    min-height: 0 !important;
+    height: 100%;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    /* Removes border radius if present */
+    border-radius: 0 !important;
+}
+
+
+
+/* Story card (empty) */
+.story {
+    grid-column: span 2;
+    background: var(--card-bg);
+    color: transparent !important;
+    box-shadow: var(--shadow);
+}
+
+.tools {
+    align-items: center;
+    justify-content: center;
+    min-height: 140px;
+}
+
+.tools img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+}
+
+.x {
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    min-height: 140px;
+}
+
+.x img {
+    width: 45%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive grid for mobile */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 32px 2vw;
+    }
+    .photo-card,
+    .story {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 18px 1vw;
+    }
+    .photo-card,
+    .story {
+        grid-column: span 1;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
+
+.hover-container {
+    position: relative;
+    display: inline-block;
+}
+
+.popup-content {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 40vh;  /* <-- This places it at 66% of viewport height */
+    transform: translateX(-50%);
+    z-index: 5000;
+    background: #fff;
+    border: 2px solid var(--accent);
+    box-shadow: 0 6px 36px rgba(129,7,126,0.13);
+    border-radius: 18px;
+    padding: 22px 32px;
+    min-width: 340px;
+    max-width: 540px;
+    font-size: 1.1rem;
+    color: #23122e;
+    line-height: 1.5;
+    text-align: left;
+    pointer-events: auto;
+    transition: opacity 0.18s;
+    opacity: 0;
+}
+
+
+.hover-container:hover .popup-content,
+.hover-container:focus-within .popup-content {
+    display: block;
+    opacity: 1;
+}
+
+@media (max-width: 700px) {
+    .popup-content {
+        min-width: 90vw;
+        max-width: 96vw;
+        padding: 14px 6vw;
+        font-size: 1rem;
+        left: 50vw;
+    }
+}
+
+.bubble-btn {
+    background: #fff;
+    border: 2px solid #3985b1;
+    border-radius: 16px;
+    font-weight: 700;
+    color: #232323;
+    padding: 4px 18px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-shadow: 0 2px 6px rgba(184,120,216,0.03);
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: box-shadow 0.15s;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    /* Optional: add margin if bubbles too close */
+}
+
+.solutions-card {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 180px;
+}
+
+.toggle-label {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #75bdca; /* Inner text color */
+    -webkit-text-stroke: 2px #1c4d5a; /* Border color and thickness */
+    letter-spacing: 0.01em;
+    font-family: 'Merriweather', serif;
+}
+
+
+.popup-inside {
+    display: none;
+    margin-top: 18px;
+    padding: 18px 18px 10px 18px;
+    background: #faf6f5;
+    border: 2px solid #b878d8;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(129,7,126,0.06);
+    font-size: 1.08rem;
+    color: #23122e;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: opacity 0.18s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Show preview on hover/focus */
+.solutions-card:hover .popup-inside,
+.solutions-card:focus-within .popup-inside {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+/* Costco Divider Styling */
+.costco-divider .divider-line,
+.costco-divider .divider-line.between {
+    background: #e31837; /* Costco Red */
+}
+
+.costco-divider .bubble-btn {
+    border-color: #e31837;
+    color: #1e3a8a; /* Costco Blue */
+}
+
+/* Costco bubbles - dynamic width for single row */
+.costco-divider .bubble-btn {
+    display: inline-flex;      /* Allows flexible button sizing */
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e31837; /* Costco Red border */
+    color: #1e3a8a;            /* Costco Blue text */
+    padding: 6px 24px;         /* Slightly increased padding */
+    min-width: fit-content;    /* Ensures no wrapping */
+    white-space: nowrap;       /* Prevents text from breaking into 2 lines */
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 16px;
+    background: #fff;
+    transition: box-shadow 0.15s;
+}
+
+/* Tooltip container */
+.costco-divider .bubble-btn {
+    position: relative;
+}
+
+/* Tooltip text */
+.costco-divider .bubble-btn::after {
+    content: "View PDF";
+    position: absolute;
+    bottom: 120%; /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1e3a8a; /* Costco Blue */
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Show tooltip on hover */
+.costco-divider .bubble-btn:hover::after {
+    opacity: 1;
+}
+
+
+
+.costco-divider .popup-content {
+    border-color: #e31837;
+    color: #1e3a8a;
+}
+
+/* Tutoring Divider - Match Costco layout */
+.tutor-divider {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+/* Equal space for each bubble */
+.tutor-divider .hover-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Line segments */
+.tutor-divider .divider-line {
+    flex: 1;
+    height: 4px;
+    background: #4ab1cb;
+    border-radius: 2px;
+    opacity: 1;
+}
+
+/* Bubble spacing between segments */
+.tutor-divider .divider-line.between {
+    width: 368px; /* Match Costco */
+    margin: 0 -6px;
+    flex: none;
+}
+
+/* Tutor bubble button dynamic width */
+.tutor-divider .bubble-btn {
+    position: relative;
+    display: inline-flex;        /* Flex sizing */
+    align-items: center;
+    justify-content: center;
+    width: auto;                 /* Auto width based on text */
+    padding: 6px 24px;           /* Balanced padding */
+    white-space: nowrap;         /* Prevents wrapping */
+    border: 2px solid #4ab1cb;
+    color: #4ab1cb;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 16px;
+    background: #fff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Tooltip text */
+.tutor-divider .bubble-btn::after {
+    content: "View Page";
+    position: absolute;
+    bottom: 120%; /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4ab1cb; /* Tutor blue */
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Show tooltip on hover */
+.tutor-divider .bubble-btn:hover::after {
+    opacity: 1;
+}
+
+
+/* Tutoring Card Style */
+.solutions-card {
+    background-color: #e6f7fa; /* lighter background */
+    border: 2px solid #4ab1cb; /* border color */
+    font-size: 25px; /* larger text */
+    color: #4ab1cb; /* text color */
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+}
+
+
+.tutor-divider .popup-content {
+    border-color: #18ade3;
+    color: #1179ba;
+}
+
+.white-card {
+    background: #f5f5f5;                   /* Light grey background */
+    border: 2px solid #bebcbc;                /* Black border */
+    border-radius: var(--border-radius);   /* Same rounded corners */
+    box-shadow: var(--shadow);             /* Base shadow */
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.7rem;                     /* Default font size */
+    font-weight: 600;
+    color: #5c5353;
+    transition: transform 0.25s ease, 
+                box-shadow 0.25s ease;     /* Smooth floating effect */
+    padding: 16px;
+    font-family: 'Merriweather', serif;
+}
+
+
+/* Floating hover effect */
+.white-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive font size option */
+.white-card.large-text {
+    font-size: 1.6rem;
+    
+}
+
+.white-card.small-text {
+    font-size: 1rem;
+}
+
+/* Shared floating effect for Costco and Tutor cards */
+.costco-card,
+.tutor-card {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.costco-card:hover,
+.tutor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Costco tooltip */
+.costco-card::after {
+    content: "Costco Journey";
+}
+
+/* Tutor tooltip */
+.tutor-card::after {
+    content: "Tutor Us Journey";
+}
+
+/* Tooltip styling for both */
+.costco-card::after,
+.tutor-card::after {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Show tooltip with floating */
+.costco-card:hover::after,
+.tutor-card:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -4px);
+}
+
+
+
+/* Contact Section */
+.contact-me {
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    margin-top: 30px;
+    grid-column: 1 / -1;
+}
+
+/* Layout container for LinkedIn and text box */
+.contact-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensures equal height */
+    gap: 20px; /* 20px space between banner and box */
+}
+
+/* LinkedIn section */
+.linkedin-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* LinkedIn Banner */
+.linkedin-banner {
+    position: relative;
+    display: inline-block;
+}
+
+.linkedin-banner img {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    border-radius: 12px;
+    display: block;
+    cursor: pointer;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Floating effect on hover */
+.linkedin-banner:hover img {
+    transform: translateY(-6px); /* Moves image upward */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Tooltip text */
+.linkedin-banner::after {
+    content: "View Page";
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0077b5;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Show and float tooltip */
+.linkedin-banner:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -4px); /* Slight floating effect */
+}
+
+
+
+
+
+.linkedin-label {
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #954894; 
+    margin-bottom: 10px;
+}
+
+/* Closing ideas textbox */
+.closing-ideas-container {
+    flex: 2; /* Makes the textbox wider */
+    display: flex;
+}
+
+.closing-ideas-text {
+    width: 100%;
+    height: 87%;
+    border: 2px solid #4ab1cb;
+    margin-top: 39px;
+    border-radius: 12px;
+    padding: 16px 18px;
+    line-height: 1.6;
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-family: 'Merriweather', serif;
+    color: #333;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    background: #fdfdfd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.closing-ideas-text:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image still keeps existing rounded corners */
+.profile-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+    display: block;
+}
+
+/* Tooltip only on hover */
+.photo-card {
+    position: relative;
+}
+
+.photo-card::after {
+    content: "Click to open resume web link";
+    position: absolute;
+    top: 10px;  /* Position inside the card at the top */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.photo-card:hover::after {
+    opacity: 1;
+}
+
+
+
+.photo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
