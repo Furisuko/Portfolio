@@ -262,25 +262,6 @@ body {
     display: block;
   }
   
-.divider-line {
-    flex: 1;
-    height: 4px;
-    background: #b878d8;
-    margin-left: -2px;  /* overlaps the bubble's border for a seamless join */
-    border-radius: 2px;
-    opacity: 1;
-}
-
-/* The line between bubbles */
-.divider-line.between {
-    width: 200px;         /* <--- SET YOUR GAP HERE (try 12-24px for close) */
-    height: 4px;
-    background: #b878d8;
-    margin: 0 -6px;      /* <--- Increase negative for tighter join */
-    border-radius: 2px;
-    flex: none;          /* <-- THIS IS THE MAGIC! */
-}
-
 
 
 .card.empty {
@@ -477,11 +458,6 @@ body {
 
 
 
-/* Costco Divider Styling */
-.costco-divider .divider-line,
-.costco-divider .divider-line.between {
-    background: #e31837; /* Costco Red */
-}
 
 .costco-divider .bubble-btn {
     border-color: #e31837;
@@ -555,21 +531,6 @@ body {
     justify-content: center;
 }
 
-/* Line segments */
-.tutor-divider .divider-line {
-    flex: 1;
-    height: 4px;
-    background: #4ab1cb;
-    border-radius: 2px;
-    opacity: 1;
-}
-
-/* Bubble spacing between segments */
-.tutor-divider .divider-line.between {
-    width: 368px; /* Match Costco */
-    margin: 0 -6px;
-    flex: none;
-}
 
 /* Tutor bubble button dynamic width */
 .tutor-divider .bubble-btn {
@@ -876,4 +837,56 @@ body {
 .photo-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Shared divider styling for Costco and Tutor */
+.row-divider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 1vw);
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 0;
+    color: #ccc; /* fallback line color */
+}
+
+.row-divider::after {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: currentColor;
+    z-index: 0;
+}
+
+/* Costco-specific styling */
+.costco-divider {
+    border-color: #e31837;
+}
+
+/* Tutor-specific styling */
+.tutor-divider {
+    border-color: #4ab1cb;
+}
+
+/* Bubble buttons remain styled */
+.row-divider .bubble-btn {
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+/* Adjust tooltips for line */
+.costco-divider .bubble-btn::after,
+.tutor-divider .bubble-btn::after {
+    bottom: 140%; /* Lift tooltips above the line */
+}
+
+/* Hide old divider lines */
+.divider-line,
+.divider-line.between {
+    display: none;
 }
