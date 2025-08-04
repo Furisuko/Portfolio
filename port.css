@@ -352,7 +352,7 @@ body {
     display: none;
     position: fixed;
     left: 50%;
-    top: 40vh;  /* <-- This places it at 66% of viewport height */
+    top: 60vh;  /* <-- This places it at 66% of viewport height */
     transform: translateX(-50%);
     z-index: 5000;
     background: #fff;
