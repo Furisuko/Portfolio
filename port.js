@@ -27,23 +27,29 @@ document.addEventListener('DOMContentLoaded', function () {
         edutechfulDivider.style.display = 'none';
     }
 
-    costcoTrigger.addEventListener('click', () => {
-        hideAllDividers();
-        costcoDivider.style.display = 'flex';
-        console.log('[toggle] Costco divider shown');
-    });
-
-    tutorCard.addEventListener('click', () => {
-        hideAllDividers();
-        tutorDivider.style.display = 'flex';
-        console.log('[toggle] Tutor divider shown');
-    });
-
-    edutechfulCard.addEventListener('click', () => {
-        hideAllDividers();
-        edutechfulDivider.style.display = 'flex';
-        console.log('[toggle] EduTechful divider shown');
-    });
+    if (costcoTrigger) {
+        costcoTrigger.addEventListener('click', () => {
+            hideAllDividers();
+            costcoDivider.style.display = 'flex';
+            console.log('[toggle] Costco divider shown');
+        });
+    } else { console.warn('[init] .costco-card-trigger not found in DOM'); }
+    
+    if (tutorCard) {
+        tutorCard.addEventListener('click', () => {
+            hideAllDividers();
+            tutorDivider.style.display = 'flex';
+            console.log('[toggle] Tutor divider shown');
+        });
+    } else { console.warn('[init] .tutor-card not found in DOM'); }
+    
+    if (edutechfulCard) {
+        edutechfulCard.addEventListener('click', () => {
+            hideAllDividers();
+            edutechfulDivider.style.display = 'flex';
+            console.log('[toggle] EduTechful divider shown');
+        });
+    } else { console.warn('[init] .edutechful-card not found in DOM'); }
 
     // ── JS-controlled popup system ──────────────────────────────────
     let activePopup     = null;
