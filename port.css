@@ -118,7 +118,7 @@ body {
 
 .intro-text {
     margin-top: 0;        /* Remove top offset */
-    font-size: 1.9rem;
+    font-size: 2.2rem;
     font-weight: 800;
     font-family: 'Merriweather', serif;
     color: #333;
@@ -616,7 +616,8 @@ body {
 
 
 /* Floating hover effect */
-.white-card:hover {
+.white-card:hover,
+.costco-card-trigger:hover {
     transform: translateY(-6px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
@@ -639,14 +640,16 @@ body {
 }
 
 .costco-card:hover,
-.tutor-card:hover {
+.tutor-card:hover,
+.edutechful-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Costco tooltip */
+/* Blank card — no tooltip likely a new company later*/
 .costco-card::after {
-    content: "Costco Journey";
+    content: "";
+    display: none;
 }
 
 /* Tutor tooltip */
@@ -654,9 +657,15 @@ body {
     content: "Tutor Us Journey";
 }
 
+.edutechful-card::after {
+    content: "EduTechful Journey";
+}
+
 /* Tooltip styling for both */
 .costco-card::after,
-.tutor-card::after {
+.costco-card-trigger::after,
+.tutor-card::after,
+.edutechful-card::after {
     position: absolute;
     top: 10px;
     left: 50%;
@@ -674,12 +683,30 @@ body {
 }
 
 /* Show tooltip with floating */
-.costco-card:hover::after,
-.tutor-card:hover::after {
+.costco-card-trigger:hover::after,
+.tutor-card:hover::after,
+.edutechful-card:hover::after {
     opacity: 1;
     transform: translate(-50%, -4px);
 }
 
+.costco-card-trigger::after {
+    content: "Costco Journey";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
 
 
 /* Contact Section */
@@ -776,13 +803,13 @@ body {
 
 .closing-ideas-text {
     width: 100%;
-    height: 88%;
+    height: 87%;
     border: 2px solid #4ab1cb;
-    margin-top: 36px;
+    margin-top: 39px;
     border-radius: 12px;
     padding: 16px 18px;
     line-height: 1.6;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     font-weight: 800;
     font-family: 'Merriweather', serif;
     color: #333;
@@ -889,4 +916,98 @@ body {
 .divider-line,
 .divider-line.between {
     display: none;
+}
+
+.edutechful-card {
+    background-color: #fff;
+    border: 2px solid #c71a4b;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edutechful-label {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #f28aaa;
+    -webkit-text-stroke: 2px #c71a4b;
+    letter-spacing: 0.01em;
+    font-family: 'Merriweather', serif;
+}
+
+/* EduTechful Divider */
+.edutechful-divider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-color: #c71a4b;
+}
+
+.edutechful-divider .hover-container {
+    display: flex;
+    justify-content: center;
+}
+
+.edutechful-divider .bubble-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 6px 24px;
+    white-space: nowrap;
+    border: 2px solid #c71a4b;
+    color: #c71a4b;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 16px;
+    background: #fff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Bubble 1 - no tooltip */
+.edutechful-divider .hover-container:nth-child(1) .bubble-btn::after {
+    content: "";
+    display: none;
+}
+
+/* Bubbles 2-4 - View Loom tooltip */
+.edutechful-divider .hover-container:nth-child(2) .bubble-btn::after,
+.edutechful-divider .hover-container:nth-child(3) .bubble-btn::after,
+.edutechful-divider .hover-container:nth-child(4) .bubble-btn::after {
+    content: "View Loom";
+    position: absolute;
+    bottom: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #c71a4b;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.edutechful-divider .hover-container:nth-child(2) .bubble-btn:hover::after,
+.edutechful-divider .hover-container:nth-child(3) .bubble-btn:hover::after,
+.edutechful-divider .hover-container:nth-child(4) .bubble-btn:hover::after {
+    opacity: 1;
+}
+
+.edutechful-divider .bubble-btn:hover::after {
+    opacity: 1;
+}
+
+.edutechful-divider .popup-content {
+    border-color: #c71a4b;
+    color: #7a0d28;
 }
