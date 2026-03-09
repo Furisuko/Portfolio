@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const edutechfulLoomLinks = [
         null,
         'https://www.loom.com/share/d4a95f22845f4198b3854c2641b6c096',
-        'https://www.loom.com/share/cf280363183b4041ae9f5db96370ac08',
+        'https://www.loom.com/share/dd0d3aaa7e1f417d90519ac53105b0b4',
         'https://www.loom.com/share/e0eac93ff95d4b0bb7e1a110eafbabf8'
     ];
 
