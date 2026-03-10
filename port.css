@@ -400,7 +400,7 @@ body {
     box-shadow: 0 2px 6px rgba(184,120,216,0.03);
     letter-spacing: 0.02em;
     cursor: pointer;
-    transition: box-shadow 0.15s;
+    transition: box-shadow 0.15s, transform 0.3s ease;
     outline: none;
     position: relative;
     z-index: 1;
@@ -1010,4 +1010,13 @@ body {
 .edutechful-divider .popup-content {
     border-color: #c71a4b;
     color: #7a0d28;
+}
+
+.costco-divider .bubble-btn:hover,
+.tutor-divider .bubble-btn:hover,
+.edutechful-divider .hover-container:nth-child(2) .bubble-btn:hover,
+.edutechful-divider .hover-container:nth-child(3) .bubble-btn:hover,
+.edutechful-divider .hover-container:nth-child(4) .bubble-btn:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
