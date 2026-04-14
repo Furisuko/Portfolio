@@ -142,9 +142,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // EduTechful bubbles — Bubble 1 has no link, bubbles 2-4 open Loom
     const edutechfulLoomLinks = [
         null,
-        'https://www.loom.com/share/23f5ca7139af4303af1aedbfc21f86cd',
-        'https://www.loom.com/share/c6380dd756264cc0b5482e6f6e97fa33',
-        'https://www.loom.com/share/553cb592d0dd4a55ae59360bb50de41b'
+        'https://www.loom.com/share/69ad74ae8839442f9e9a17af196818cf',
+        'https://www.loom.com/share/555f12029f2546b289d22dfb74b322d4',
+        'https://www.loom.com/share/ca537a68cbbd4d3699cf5ae7d087b4be'
     ];
 
     document.querySelectorAll('.edutechful-divider .bubble-btn').forEach((btn, i) => {
