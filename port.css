@@ -468,14 +468,14 @@ body {
 
 /* Costco bubbles - dynamic width for single row */
 .costco-divider .bubble-btn {
-    display: inline-flex;      /* Allows flexible button sizing */
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #e31837; /* Costco Red border */
-    color: #1e3a8a;            /* Costco Blue text */
-    padding: 6px 24px;         /* Slightly increased padding */
-    min-width: fit-content;    /* Ensures no wrapping */
-    white-space: nowrap;       /* Prevents text from breaking into 2 lines */
+    border: 2px solid #7c93e7;
+    color: #c71a4b;
+    padding: 6px 24px;
+    min-width: fit-content;
+    white-space: nowrap;
     font-size: 1rem;
     font-weight: 700;
     border-radius: 16px;
