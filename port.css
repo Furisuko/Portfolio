@@ -214,6 +214,7 @@ body {
     align-items: center;      /* vertical centering */
     justify-content: center;  /* horizontal centering */
     padding: 18px 20px;
+    border: 2px solid #7c93e7;
 }
 
 .costco-logo {
