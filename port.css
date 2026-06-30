@@ -206,7 +206,7 @@ body {
 
 .blank-card {
     grid-column: span 1;
-    background: #ececec;
+    background: #d7e8f6;
     min-height: 140px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
