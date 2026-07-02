@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (photoCard) {
         photoCard.addEventListener('click', () => {
             console.log('[photo-card] clicked → opening resume PDF');
-            window.open('Customer Success 2026.pdf', '_blank');
+            window.open('Customer Success.pdf', '_blank');
         });
     }
 
